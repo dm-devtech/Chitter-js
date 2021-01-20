@@ -6,7 +6,7 @@ const server = http.createServer((req, res) => {
     res.setHeader('Content-Type', 'text/html')
     res.write('this is the profile page')
     return res.end();
-  } else if(url = "/") {
+  } else if(url == "/") {
     res.setHeader('Content-Type', 'text/html')
     res.write('this is the main page')
     return res.end();
