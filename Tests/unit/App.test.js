@@ -1,24 +1,23 @@
-// const request = require('supertest')
-// import 'expect-puppeteer'
-//
-// describe("gets page output", () => {
-//
+// describe('Google', () => {
 //   beforeAll(async () => {
-//     await page.goto('http://localhost:3001')
-//   });
+//     await page.goto('https://www.google.com')
+//   })
 //
-//   it("test homepage", async () => {
-//     console.log(page)
-//     await expect(page).toMatch('this is the main page')
+//   it('should display "google" text on page', async () => {
+//     await expect(page).toMatch('google')
 //   })
 // })
 
-describe('Google', () => {
-  beforeAll(async () => {
-    await page.goto('https://www.google.com')
-  })
+const app = require('../../server') // Link to your server file
+const supertest = require('supertest')
+const request = supertest(app)
 
-  it('should display "google" text on page', async () => {
-    await expect(page).toMatch('google')
+describe('Gets the test endpoint', () => {
+  it('Test main page text and status', async done => {
+    // Sends GET Request to / endpoint
+    const response = await request.get('/')
+    expect(response.status).toBe(200)
+    expect(response.text).toBe('this is the main page')
+    done()
   })
 })
