@@ -28,4 +28,12 @@ describe('Gets the test endpoint', () => {
     expect(response.text).toBe('this is the profile page')
     done()
   })
+
+  it('Test page not found', async done => {
+    // Sends GET Request to / endpoint
+    const response = await request.get('/q')
+    expect(response.status).toBe(200)
+    expect(response.text).toBe('page not found')
+    done()
+  })
 })
