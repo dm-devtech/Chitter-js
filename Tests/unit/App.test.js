@@ -20,4 +20,12 @@ describe('Gets the test endpoint', () => {
     expect(response.text).toBe('this is the main page')
     done()
   })
+
+  it('Test profile page text and status', async done => {
+    // Sends GET Request to / endpoint
+    const response = await request.get('/profile')
+    expect(response.status).toBe(200)
+    expect(response.text).toBe('this is the profile page')
+    done()
+  })
 })
