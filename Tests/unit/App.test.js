@@ -36,4 +36,12 @@ describe('Gets the test endpoint', () => {
     expect(response.text).toBe('page not found')
     done()
   })
+
+  it('Test settings page', async done => {
+    // Sends GET Request to / endpoint
+    const response = await request.get('/settings')
+    expect(response.status).toBe(200)
+    expect(response.text).toBe('<h1>this is the settings page</h1>')
+    done()
+  })
 })
