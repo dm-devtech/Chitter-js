@@ -41,7 +41,7 @@ describe('Gets the test endpoint', () => {
     // Sends GET Request to / endpoint
     const response = await request.get('/settings')
     expect(response.status).toBe(200)
-    expect(response.text).toBe('<h1>this is the settings page</h1>')
+    expect(response.text).toBe('<h1>this is the settings page</h1><form action="/settings" method="POST"><input type="text"><button type="submit">Submit</button>')
     done()
   })
 })
