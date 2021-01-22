@@ -19,7 +19,7 @@ describe('Gets the test endpoint', () => {
     const response = await request.get('/')
     console.log(response.text)
     expect(response.status).toBe(200)
-    expect(response.text).toBe('confirmed')
+    expect(response.text).toBe('<html><head><title>Welcome</title></head><body><h1>This is awesome</h1></body></html>')
     done()
   })
 
