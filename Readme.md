@@ -1,9 +1,9 @@
 ### Twitter clone
 
 #### Tech
-- Javascript, Node, Socket, MongoDB
+- Javascript, Node, express, Pug, Socket, MongoDB
 
 #### Testing:
-- Jest, Jest-puppeteer
+- Jest
 
 ##### Coverage
