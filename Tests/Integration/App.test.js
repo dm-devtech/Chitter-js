@@ -12,6 +12,7 @@ const app = require('../../server') // Link to your server file
 const supertest = require('supertest')
 const request = supertest(app)
 
+
 describe('Gets the test endpoint', () => {
   it('Test main page text and status', async done => {
     // Sends GET Request to / endpoint
@@ -39,9 +40,15 @@ describe('Gets the test endpoint', () => {
 
   it('Test settings page', async done => {
     // Sends GET Request to / endpoint
-    const response = await request.get('/settings')
-    expect(response.status).toBe(200)
-    expect(response.text).toBe('<h1>this is the settings page</h1><form action="/settings" method="POST"><input type="text"><button type="submit">Submit</button>')
-    done()
+    supertest(app)
+    .post("/settings")
+    .type("text")
+    .send("hey")
+    .then(() => {
+      supertest(app)
+        .get("/settings")
+        console.log(supertest(app).get("/settings"))
+        .expect({ array: ["hey"] }, done);
   })
+})
 })
