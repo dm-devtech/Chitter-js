@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node app.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -17,5 +18,22 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/"
     ]
-  }
+  },
+  "name": "twitter-clone",
+  "description": "- Javascript, Node, Socket, MongoDB",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dm-devtech/Chitter-js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dm-devtech/Chitter-js/issues"
+  },
+  "homepage": "https://github.com/dm-devtech/Chitter-js#readme"
 }
