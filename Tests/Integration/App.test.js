@@ -16,10 +16,10 @@ const request = supertest(app)
 describe('Gets the test endpoint', () => {
   it('Test main page text and status', async done => {
     // Sends GET Request to / endpoint
-    const response = await request.get('/')
-    expect(response.status).toBe(200)
-    expect(response.text).toContain('<h1>This is awesome</h1>')
-    expect(response.text).toContain('<title>Home</title>')
+    const homeResponse = await request.get('/')
+    const loginResponse = await request.get('/login')
+    expect(homeResponse.status).toBe(302)
+    expect(loginResponse.text).toContain('Cannot GET /login')
     done()
   })
 
