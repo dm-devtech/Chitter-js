@@ -18,7 +18,8 @@ describe('Gets the test endpoint', () => {
     // Sends GET Request to / endpoint
     const response = await request.get('/')
     expect(response.status).toBe(200)
-    expect(response.text).toContain('This is awesome')
+    expect(response.text).toContain('<h1>This is awesome</h1>')
+    expect(response.text).toContain('<title>Home</title>')
     done()
   })
 
