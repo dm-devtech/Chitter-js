@@ -7,7 +7,10 @@ app.set("views", "views") // tell server where to look to find view files, when 
 
 app.get("/", (req, res, next) => {
   // request variable incoming, response variable sending back to user and next which handles middleware
-  res.status(200).render("home") // when access code this will run
+  let payload = { // payload refers to data we're sending to a function or page
+    pageTitle: "Home"
+  }
+  res.status(200).render("home", payload) // payload is data to send to home page
 })
 
 module.exports = app
