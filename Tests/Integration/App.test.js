@@ -19,7 +19,7 @@ describe('Gets the test endpoint', () => {
     const response = await request.get('/')
     console.log(response.text)
     expect(response.status).toBe(200)
-    expect(response.text).toBe('<html><head><title>Home</title></head><body><h1>This is awesome</h1></body></html>')
+    expect(response.text).toBe('<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/><title>Home</title></head><body><h1>This is awesome</h1></body></html>')
     done()
   })
 
