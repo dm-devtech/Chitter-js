@@ -29,6 +29,7 @@ describe('Gets the test endpoint', () => {
     expect(loginResponse.text).toContain('<a href="/register">Need an account? Register here</a>')
     done()
   })
+  
   // it('Test settings page', async done => {
   //   // Sends GET Request to / endpoint
   //   supertest(app)
