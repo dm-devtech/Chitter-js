@@ -12,15 +12,14 @@ const app = require('../../server') // Link to your server file
 const supertest = require('supertest')
 const request = supertest(app)
 
-
 describe('Gets the test endpoint', () => {
-  it('Test main page text and status', async done => {
+  it('Test main page text and status and redirects to login page', async done => {
     // Sends GET Request to / endpoint
     const homeResponse = await request.get('/')
     const loginResponse = await request.get('/login')
     expect(homeResponse.status).toBe(302)
-    expect(loginResponse.status).toBe(404)
-    expect(loginResponse.text).toContain('Cannot GET /login')
+    expect(loginResponse.status).toBe(200)
+    expect(loginResponse.text).toContain('Login')
     done()
   })
 
