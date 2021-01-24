@@ -23,7 +23,12 @@ describe('Gets the test endpoint', () => {
     done()
   })
 
-
+  it('Tests form on login page and link to register apge', async done => {
+    const loginResponse = await request.get('/login')
+    expect(loginResponse.text).toContain('<form action="" method="post"><input type="text" name="logUsername" placeholder="Username or email" required=""/><input type="password" name="logPassword" placeholder="Password" required=""/><input type="submit" value="Login"/></form>')
+    expect(loginResponse.text).toContain('<a href="/register">Need an account? Register here</a>')
+    done()
+  })
   // it('Test settings page', async done => {
   //   // Sends GET Request to / endpoint
   //   supertest(app)

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1611491173181" clover="3.2.0">
+  <project timestamp="1611491173182" name="All files">
+    <metrics statements="24" coveredstatements="21" conditionals="4" coveredconditionals="2" methods="3" coveredmethods="2" elements="31" coveredelements="25" complexity="0" loc="24" ncloc="24" packages="2" files="3" classes="3"/>
+    <package name="twitter-clone-js">
+      <metrics statements="16" coveredstatements="13" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="1"/>
+      <file name="middleware.js" path="C:\Users\DM\Course\twitter-clone-js\middleware.js">
+        <metrics statements="4" coveredstatements="3" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="cond" truecount="2" falsecount="2"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="server.js" path="C:\Users\DM\Course\twitter-clone-js\server.js">
+        <metrics statements="12" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="twitter-clone-js.routes">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="loginRoutes.js" path="C:\Users\DM\Course\twitter-clone-js\routes\loginRoutes.js">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
