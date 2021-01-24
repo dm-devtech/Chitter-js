@@ -1,6 +1,6 @@
 module.exports = {
   server: {
     command: 'node server js',
-    port: 3001,
+    port: 3003,
   },
 }
